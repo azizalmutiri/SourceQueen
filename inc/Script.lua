@@ -341,7 +341,7 @@ if not msg.Admin then return "• **هذا الامر يخص {الادمن,ال�
 return GetListAdmin(msg) 
 end
 
-if (MsgText[1] == "منشن" or MsgText[1] == "تاك" or MsgText[1] == "منشن دروك" or MsgText[1] == "تاك دروك") then
+if (MsgText[1] == "منشن" or MsgText[1] == "تاك" or MsgText[1] == "منشن كوين" or MsgText[1] == "تاك كوين") then
 if not msg.Admin then return "• ** هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
 },function(ta,taha)
@@ -807,7 +807,7 @@ redis:setex(max..'linkGroup'..msg.sender_user_id_,300,true)
 return '• عزيزي قم برسال الرابط الجديد ..'
 end
 
-if (MsgText[1] == "الرابط" or MsgText[1] == "رابط دروك") then
+if (MsgText[1] == "الرابط" or MsgText[1] == "رابط كوين") then
 if not redis:get(max..'linkGroup'..msg.chat_id_) then 
 return "• ** لا يوجد رابط .\n• **لانشاء رابط ارسل { `انشاء رابط` }\n" 
 end
