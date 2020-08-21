@@ -4205,7 +4205,7 @@ return sendMsg(msg.chat_id_,0,callback_Text)
 end
 elseif not msg.SudoUser and Text==" احبك" or Text == "احبك" then
 return 
-sendMsg(msg.chat_id_,msg.id_,sss[math.random(#sss)])
+sendMsg(msg.chat_id_,msg.id_,www[math.random(#www)])
 elseif not msg.SudoUser and Text==" جبر" or Text == "جبر" then
 return 
 sendMsg(msg.chat_id_,msg.id_,ccg[math.random(#ccg)])
