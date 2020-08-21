@@ -607,7 +607,7 @@ return false
 end 
 end
 
-if (MsgText[1] == "تنزيل منشى اساسي" or MsgText[1] == "تنزيل منشى اساسي") then
+if (MsgText[1] == "تنزيل منشى اساسي" or MsgText[1] == "تنزيل منشئ اساسي") then
 if not msg.SudoUser then return "• **هذا الامر يخص {المطور,المطور الاساسي} فقط  \n" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="remkara"}) 
@@ -807,7 +807,7 @@ redis:setex(max..'linkGroup'..msg.sender_user_id_,300,true)
 return '• عزيزي قم برسال الرابط الجديد ..'
 end
 
-if (MsgText[1] == "الرابط" or MsgText[1] == "رابط كوين") then
+if (MsgText[1] == "الرابط" or MsgText[1] == "رابط بلاك") then
 if not redis:get(max..'linkGroup'..msg.chat_id_) then 
 return "• ** لا يوجد رابط .\n• **لانشاء رابط ارسل { `انشاء رابط` }\n" 
 end
@@ -1391,10 +1391,10 @@ end
 
 if MsgText[1] == "تفعيل" then
 
-if MsgText[2] == "ردود كوين" 	then return unlock_replay(msg) end
+if MsgText[2] == "ردود بلاك" 	then return unlock_replay(msg) end
 if MsgText[2] == "الاذاعه" 	then return unlock_brod(msg) end
-if MsgText[2] == "ايدي كوين" 	then return unlock_ID(msg) end
-if MsgText[2] == "ترحيب كوين" 	then return unlock_Welcome(msg) end
+if MsgText[2] == "ايدي بلاك" 	then return unlock_ID(msg) end
+if MsgText[2] == "ترحيب بلاك" 	then return unlock_Welcome(msg) end
 if MsgText[2] == "التحذير" 	then return unlock_waring(msg) end 
 end
 
@@ -1403,10 +1403,10 @@ end
 
 if MsgText[1] == "تعطيل" then
 
-if MsgText[2] == "ردود كوين" 	then return lock_replay(msg) end
+if MsgText[2] == "ردود بلاك" 	then return lock_replay(msg) end
 if MsgText[2] == "الاذاعه" 	then return lock_brod(msg) end
-if MsgText[2] == "ايدي كوين" 	then return lock_ID(msg) end
-if MsgText[2] == "ترحيب كوين" 	then return lock_Welcome(msg) end
+if MsgText[2] == "ايدي بلاك" 	then return lock_ID(msg) end
+if MsgText[2] == "ترحيب بلاك" 	then return lock_Welcome(msg) end
 if MsgText[2] == "التحذير" 	then return lock_waring(msg) end
 end
 
@@ -3924,9 +3924,12 @@ local sss = {
 }
 local www = {
 "اكثر يا روح ["..Bot_Name.."] .",
-"جبر): .",
-"مورر .",
-"احبكك .",
+".‏على صوته المبحوح لا قال أحبك 
+‏تطيّب الخواطر لو لها عام زعلانه🖤",
+"‏لا قال احبك دقات قلبي تزيد
+‏لعنبوها من كلمه تلعب فيني💛 .",
+"‏ضياعي الاول والاخير 
+‏"لا قال في نص الكلام أحبك♥️ .",
 }
 local bs = {
   "قم قم",
@@ -4161,7 +4164,7 @@ local Queen = {
 }
 local ghg = {
 "لبيه ي وتينها",
-"عيون كوين",
+"عيون ["..Bot_Name.."] .",
 "آمرني يقلبي",
 "اطلق من يناديني",
 "يمرحبا .",
