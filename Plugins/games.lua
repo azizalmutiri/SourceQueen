@@ -1,10 +1,10 @@
 --[[
-الالعاب ل سورس كوين
-
+الالعاب ل سورس روي
+تم تعديل الملف واضافه الالعاب من قب مالك بن عتب (@ali1b)
 --]]
 local function games(msg,MsgText)
 if msg.type ~= "pv" then
-if MsgText[1] == "تفعيل" and MsgText[2] == "الالعاب" or MsgText[2] == "اللعبه" or MsgText[2] == "اللعبة" or MsgText[2] == "العاب كوين" then
+if MsgText[1] == "تفعيل" and MsgText[2] == "الالعاب" or MsgText[2] == "اللعبه" or MsgText[2] == "اللعبة" or MsgText[2] == "العاب دروك" then
 if not msg.Admin then return "• ** هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
 if not redis:get(max..'lock_geams'..msg.chat_id_) then 
 return "• ** أهلا عزيزي "..msg.TheRankCmd.."\n• ** الالعاب بالتاكيد تم تفعيلها\n" 
@@ -13,7 +13,7 @@ redis:del(max..'lock_geams'..msg.chat_id_)
 return "• ** أهلا عزيزي "..msg.TheRankCmd.."\n• ** تم تفعيل الالعاب \n" 
 end 
 end
-if MsgText[1] == "تعطيل" and MsgText[2] == "الالعاب" or MsgText[2] == "اللعبه" or MsgText[2] == "اللعبة" or MsgText[2] == "كوين" then
+if MsgText[1] == "تعطيل" and MsgText[2] == "الالعاب" or MsgText[2] == "اللعبه" or MsgText[2] == "اللعبة" or MsgText[2] == "دروك" then
 if not msg.Admin then return "• ** هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
 if redis:get(max..'lock_geams'..msg.chat_id_) then 
 return "• ** أهلا عزيزي "..msg.TheRankCmd.."\n• ** الالعاب بالتأكيد معطله\n" 
